@@ -40,7 +40,7 @@ function refreshData()
         } );
     } );
 
-    setTimeout( refreshData, 60 * 15 * 100 );
+    setTimeout( refreshData, 60 * 15 * 1000 );
 }
 
 refreshData();
