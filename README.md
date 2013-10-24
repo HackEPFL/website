@@ -14,7 +14,10 @@ You will need the following software to be able to run this website:
 - [Git](http://git-scm.com/)
 - [Node.js](http://nodejs.org)
 - [Ruby](https://www.ruby-lang.org/)
-- [Bundler](http://bundler.io/): install with `$ gem install bundler`
+
+As well as the [Bundler](http://bundler.io/) [gem](http://rubygems.org):
+
+    $ gem install bundler
 
 Then open a console and enter the following commands:
 
