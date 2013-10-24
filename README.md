@@ -9,17 +9,27 @@ We'll hopefully teach you better practices during the workshops :)
 
 ## Setup
 
+You will need the following software to be able to run this website:
+
+- [Git](http://git-scm.com/)
+- [Node.js](http://nodejs.org)
+- [Ruby](https://www.ruby-lang.org/)
+- [Bundler](http://bundler.io/): install with `$ gem install bundler`
+
+Then open a console and enter the following commands:
+
     $ git clone https://github.com/HackEPFL/website.git
     $ cd website/
     $ npm install
+    $ bundle install
 
 ### Development
 
-    $ foreman start
+    $ bundle exec foreman start
 
 ### Production
     
-    $ compass compile -e production --force public/
+    $ bundle exec compass compile -e production --force public/
     $ npm start
 
 ## License
