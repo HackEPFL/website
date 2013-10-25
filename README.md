@@ -30,10 +30,14 @@ Then open a console and enter the following commands:
 
     $ bundle exec foreman start
 
+The website should now be accessible at [http://localhost:5100]().
+
 ### Production
     
     $ bundle exec compass compile -e production --force public/
     $ npm start
+
+The website should now be accessible at [http://localhost:4000]().
 
 ## License
 
