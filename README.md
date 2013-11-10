@@ -9,6 +9,9 @@ We'll hopefully teach you better practices during the workshops :)
 
 ## Setup
 
+The configuration repository that contains our Facebook and MailChimp API keys is thus private.  
+We haven't yet made possible to run the website without a local clone of that repository, but if you want to help with the website, free to [ping Romac on Twitter](https://twitter.com/_romac), and we'll figure something out.
+
 You will need the following software to be able to run this website:
 
 - [Git](http://git-scm.com/)
@@ -23,6 +26,7 @@ Then open a console and enter the following commands:
 
     $ git clone https://github.com/HackEPFL/website.git
     $ cd website/
+    $ git clone https://github.com/romac/hackepfl-config.git ./conf
     $ npm install
     $ bundle install
 
