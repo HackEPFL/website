@@ -93,7 +93,12 @@ app.get( '/events/:slug', function( req, res, next )
     } );
 } );
 
-app.get( '/people', function( req, res )
+app.get('/people', function( req, res )
+{
+    res.redirect( 301, '/contact' );
+} );
+
+app.get( '/contact', function( req, res )
 {
     res.render( 'people', {
         title: 'People',
@@ -217,7 +222,7 @@ app.use( function( req, res, next )
 if( !module.parent )
 {
     var port = process.env.PORT || 3000;
-    
+
     app.listen( port );
     console.log( 'Express app started on port ' + port );
 }
