@@ -19,17 +19,25 @@
             <p><%= person.bio %></p>
           <% } %>
           <p class="icons">
+            <% if( person.twitter ) { %>
             <span class="icon twitter"></span>
             <a href="https://twitter.com/<%= person.twitter %>">@<%= person.twitter %></a>
+            <% } %>
             <br />
+            <% if( person.facebook ) { %>
             <span class="icon facebook"></span>
             <a href="https://facebook.com/<%= person.facebook %>"><%= person.facebook %></a>
+            <% } %>
+            <% if( person.github ) { %>
             <br />
             <span class="icon github"></span>
             <a href="https://github.com/<%= person.github %>"><%= person.github %></a>
+            <% } %>
+            <% if( person.website ) { %>
             <br />
             <span class="icon website"></span>
             <a href="http://<%= person.website %>"><%= person.website %></a>
+            <% } %>
           </p>
         </div>
       </div>
