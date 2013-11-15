@@ -5,6 +5,7 @@ var http = require( 'http' ),
     url = require( 'url' ),
     request = require( 'request' ),
     express = require( 'express' ),
+    logger = require( 'express-logger' ),
     feedparser = require( 'feedparser' ),
     MailChimpAPI = require( 'mailchimp' ).MailChimpAPI,
     config = require( './conf' ),
@@ -55,6 +56,7 @@ app.set( 'view engine', 'ejs' );
 app.locals.moment = require( 'moment' );
 
 app.use( express.logger() );
+app.use( logger( { path: __dirname + '/log/node.log' } ) );
 app.use( express.compress() );
 app.use( express.bodyParser() );
 

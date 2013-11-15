@@ -3,4 +3,4 @@ public/.sass-cache
 node_modules/
 app.orig.js
 doc/
-log/
+log/*.log
