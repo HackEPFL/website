@@ -1,27 +1,37 @@
-# Foundation libsass template
+# Hackers at EPFL 2.0
 
-This is a template to start your own project that uses Grunt and libsass!
+The new version of [our website](https://hackersatepfl.com).  
+
+This repository only contains static files. Once we'll be happy with the new design, we'll integrate it into our [existing Node.js app](https://github.com/hackepfl/website).
 
 ## Requirements
 
-You'll need to have the following items installed before continuing.
-
-  * [Node.js](http://nodejs.org): Use the installer provided on the NodeJS website.
-  * [Grunt](http://gruntjs.com/): Run `[sudo] npm install -g grunt-cli`
-  * [Bower](http://bower.io): Run `[sudo] npm install -g bower`
+  * Ruby 1.9+
+  * [Node.js](http://nodejs.org)
+  * [compass](http://compass-style.org/): `gem install compass`
+  * [bower](http://bower.io): `npm install bower -g`
 
 ## Quickstart
 
+1. Fork the repository, and rename it.
+2. git clone https://github.com/you/hackepfl-redesign
+3. Run `bower install` to install the latest version of Foundation
+
+Then when you're working on your project, just run the following command:
+
 ```bash
-git clone git@github.com:zurb/foundation-libsass-template.git
-npm install && bower install
+compass watch
 ```
 
-While you're working on your project, run:
-
-`grunt`
-
 And you're set!
+
+## Upgrading
+
+If you'd like to upgrade to a newer version of Foundation down the road just run:
+
+```bash
+bower update
+```
 
 ## Directory Strucutre
 
