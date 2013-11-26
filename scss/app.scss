@@ -15,20 +15,43 @@ $experimental-support-for-opera: false;
 $experimental-support-for-khtml: false;
 @import "compass/css3";
 
+.top-bar .name h1 a {
+  width: 100%;
+}
+
 .top-bar-section ul li.toggle-topbar:hover > a {
   background-color: inherit;
 }
 
-#cover {
-  height: 300px;
-  background: url(../img/cover.jpg) no-repeat top center;
-  @include background-size(cover);
+.big-lead {
+  @extend .lead;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.logo {
+  height: 2.5em;
+  margin-right: 10px;
+}
+
+@media #{$screen} and (min-width: 40em) {
+  #cover {
+    height: 300px;
+    background: url(../img/cover.jpg) no-repeat top center;
+    @include background-size(cover);
+  }
 }
 
 #main-content {
   background-color: #FAFAFA;
   .panel {
     background-color: #DDD;
+  }
+}
+
+#newsletter {
+  .panel {
+    padding-top: 0.8rem;
   }
 }
 
