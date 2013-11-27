@@ -33,7 +33,7 @@ If you'd like to upgrade to a newer version of Foundation down the road just run
 bower update
 ```
 
-## Directory Strucutre
+## Directory Structure
 
   * `scss/_settings.scss`: Foundation configuration settings go in here
   * `scss/app.scss`: Application styles go here
