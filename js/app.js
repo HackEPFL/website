@@ -21,6 +21,6 @@
     );
   }
 
-  // $(document).foundation();
+  $(document).foundation();
 
 } )( this );
