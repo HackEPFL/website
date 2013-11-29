@@ -13,7 +13,10 @@
 
 $experimental-support-for-opera: false;
 $experimental-support-for-khtml: false;
+
 @import "compass/css3";
+
+$cover-image-url: "../img/epfl_1.jpg";
 
 .top-bar .name h1 a {
   width: 100%;
@@ -37,7 +40,7 @@ $experimental-support-for-khtml: false;
 @media #{$screen} and (min-width: 40em) {
   #cover {
     height: 300px;
-    background: url(../img/cover.jpg) no-repeat top center;
+    background: url($cover-image-url) no-repeat top center;
     @include background-size(cover);
   }
 }
