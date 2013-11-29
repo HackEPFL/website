@@ -1,5 +1,6 @@
-public/stylesheets/*.css
+public/css/*.css
 public/.sass-cache
+public/bower_components
 node_modules/
 app.orig.js
 doc/
