@@ -16,11 +16,11 @@ You will need the following software to be able to run this website:
 
 - [Git](http://git-scm.com/)
 - [Node.js](http://nodejs.org)
-- [Ruby](https://www.ruby-lang.org/)
-
-As well as the [Bundler](http://bundler.io/) [gem](http://rubygems.org):
-
-    $ gem install bundler
+- [bower](http://bower.io): `npm install bower -g`
+- [Node.js](http://nodejs.org)
+- [Ruby 1.9+](https://www.ruby-lang.org/)
+- [compass](http://compass-style.org/): `gem install compass`
+- [foreman](https://github.com/ddollar/foreman): `gem install foreman`
 
 Then open a console and enter the following commands:
 
@@ -28,17 +28,17 @@ Then open a console and enter the following commands:
     $ cd website/
     $ git clone https://github.com/romac/hackepfl-config.git ./conf
     $ npm install
-    $ bundle install
+    $ cd public/ && bower install && cd ..
 
 ### Development
 
-    $ bundle exec foreman start
+    $ foreman start
 
 The website should now be accessible at [http://localhost:5100]().
 
 ### Production
     
-    $ bundle exec compass compile -e production --force public/
+    $ compass compile -e production --force public/
     $ npm start
 
 The website should now be accessible at [http://localhost:4000]().

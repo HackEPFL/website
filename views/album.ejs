@@ -1,17 +1,22 @@
 <% layout( 'layout' ) -%>
-<% script( '//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' ) %>
-<% script( '/javascripts/lib/jquery.jknav.min.js' ) %>
-<% script( '/javascripts/album.js' ) %>
 
-<div class="row" id="album">
-  <div class="twelve columns">
-    <h4><%= album.name %></h4>
-    <div id="pictures">
-      <% for( var i = 0; i < album.photos.length; i++ ) { var photo = album.photos[ i ]; %>
-        <div class="picture" id="photo-<%= photo.id %>">
-          <img src="<%= photo.source %>" alt="<%= photo.name %>" />
-        </div>
-      <% } %>
+<% script( '/bower_components/foundation/js/foundation.min.js' ) %>
+<% script( '/bower_components/foundation/js/foundation/foundation.clearing.js' ) %>
+<% block( 'scripts', '<script>$(document).foundation()</script>' ) %>
+
+<main id="main-content">
+  <div class="row" id="album">
+    <div class="small-12 columns">
+      <h2><%= album.name %></h2>
+      <ul class="clearing-thumbs" data-clearing>
+        <% for( var i = 0; i < album.photos.length; i++ ) { var photo = album.photos[ i ]; %>
+          <li id="photo-<%= photo.id %>">
+            <a href="<%= photo.source %>">
+              <img src="<%= photo.picture %>" alt="<%= photo.name %>" />
+            </a>
+          </li>
+        <% } %>
+      </ul>
     </div>
   </div>
-</div>
+</main>
