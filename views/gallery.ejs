@@ -1,38 +1,31 @@
 <% layout( 'layout' ) -%>
 
-<div class="row">
-  <div class="twelve columns">
-    <h3>Gallery</h3>
-    <p class="lead hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <hr />
-  </div>
-</div>
+<main id="main-content">
 
-<div class="row grid" id="gallery">
-  <div class="twelve columns">
-    <h4>
-      Albums
-    </h4>
-    <div class="row">
-      <% if( !albums.length ) { %>
-      <div class="four columns">
-        <p>There are no albums.</p>
-      </div>
-      <% } else { %>
-        <% for( var i = 0; i < albums.length; i++ ) { var album = albums[ i ]; %>
-          <div class="four columns">
-            <a href="/album/<%= album.id %>">
-              <img src="https://graph.facebook.com/<%= album.id %>/picture?type=album" />
-            </a>
-            <h5><a href="/album/<%= album.id %>"><%= album.name %></a></h5>
-          </div>
-        <% } %>
-      <% } %>
+  <div class="row" id="gallery">
+    <div class="small-12 columns">
+      <h2>Gallery</h2>
     </div>
   </div>
-</div>
+  <div class="row" id="gallery">
+    <div class="small-12 columns">
+      <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
+      <% if( !albums.length ) { %>
+        <li>
+          <p>There are no albums.</p>
+        </li>
+      <% } else { %>
+        <% for( var i = 0; i < albums.length; i++ ) { var album = albums[ i ]; %>
+          <li>
+            <a href="/album/<%= album.id %>">
+              <img src="https://graph.facebook.com/<%= album.cover_photo %>/picture" alt="" />
+            </a>
+            <h5><a href="/album/<%= album.id %>/"><%= album.name %></a></h5>
+          </li>
+        <% } %>
+      <% } %>
+      </ul>
+    </div>
+  </div>
+
+</main>
