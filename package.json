@@ -25,7 +25,8 @@
     "dateformat": "~1.0.6-1.2.3",
     "feedparser": "~0.15.2",
     "moment": "~2.0.0",
-    "express-logger": "0.0.2"
+    "express-logger": "0.0.2",
+    "marked": "~0.3.0"
   },
   "devDependencies": {},
   "scripts": {

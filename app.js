@@ -3,6 +3,7 @@ process.env.TZ = 'Europe/Zurich';
 
 var http = require( 'http' ),
     url = require( 'url' ),
+    fs = require( 'fs' ),
     request = require( 'request' ),
     express = require( 'express' ),
     logger = require( 'express-logger' ),
@@ -67,6 +68,20 @@ app.get( '/', function( req, res )
         events: data.events,
         news: data.news,
         page: 'home'
+    } );
+} );
+
+var missionText = fs.readFileSync( __dirname + '/res/mission.md', { encoding: 'utf-8' } );
+var marked = require( 'marked' );
+var missionHtml = marked( missionText );
+
+app.get( '/mission', function( req, res )
+{
+    res.render( 'mission', {
+        title: 'Mission',
+        missionHtml: missionHtml,
+        page: 'mission',
+        require: require
     } );
 } );
 
