@@ -20,7 +20,7 @@ _Hackers at EPFL_ provides an environment where to propose (and attend) periodic
 We expect the scheduling of tutorials to become quickly autonomous and driven solely by the members, although the association stays responsible of all the logistic aspects, including food and drinks when needed.
 
 On the longer term, _Hackers at EPFL_ can also become part of CoderDojo. CoderDojo is a global collaboration providing free and open learning to young people, especially in programming
-technology. We plan to contribute back to the Lausanne area with our skilled association members, who will organize tutorials and workshops for younger students. Our goal is to do our part in motivating young minds towards STEM (an area of study which more dedicated people, year after year).
+technology. We plan to contribute back to the Lausanne area with our skilled association members, who will organize tutorials and workshops for younger students. Our goal is to do our part in motivating young minds towards STEM (an area of study which needs more dedicated people, year after year).
 
 ## Structure
 _Hackers at EPFL_ is an inclusive association, which embraces (and encourages) diversity. The hierarchy is almost completely flat: except a few roles (i.e., President, Vice-President, treasure) which are needed to officially run the association, each single member will always be referred to as "hacker" (included the 3 people covering the above mentioned roles).
