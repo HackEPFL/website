@@ -71,7 +71,7 @@ app.get( '/', function( req, res )
     } );
 } );
 
-var missionText = fs.readFileSync( __dirname + '/res/mission.md', { encoding: 'utf8' } );
+var missionText = fs.readFileSync( __dirname + '/res/mission.md', 'utf8' );
 var marked = require( 'marked' );
 var missionHtml = marked( missionText );
 

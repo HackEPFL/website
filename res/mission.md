@@ -8,7 +8,7 @@ At the same time, we want to reestablish the primary meaning of the word “hack
 _Hackers at EPFL_ wants to establish two kind of events in EPFL:
 
 ### Hackathons
- A hackathon (also known as a hack day, hackfest or codefest) is an event in which   computer programmers and others in the field of software development, like graphic designers,   interface designers and project managers collaborate intensively on software projects. Occasionally, there is a hardware component as well.
+ A hackathon (also known as a hack day, hackfest or codefest) is an event in which computer programmers and others in the field of software development, like graphic designers, interface designers and project managers collaborate intensively on software projects. Occasionally, there is a hardware component as well.
 
 _Hackers at EPFL_ plans to bring 1-2 hackathons per semester in the EPFL campus, taking care of logistics, food, contacts with interested companies, etc. The events will be open also to external people, in order to enable cross-pollination, and to strengthen the connections between EPFL students and the fertile developer community in Vaud, Switzerland.
 
