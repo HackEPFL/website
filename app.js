@@ -75,6 +75,9 @@ var missionText = fs.readFileSync( __dirname + '/res/mission.md', 'utf8' );
 var marked = require( 'marked' );
 var missionHtml = marked( missionText );
 
+var aliases = require('./lib/aliases');
+aliases(app);
+
 app.get( '/mission', function( req, res )
 {
     res.render( 'mission', {
