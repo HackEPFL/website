@@ -9,7 +9,6 @@ var http = require( 'http' ),
     logger = require( 'express-logger' ),
     feedparser = require( 'feedparser' ),
     MailChimpAPI = require( 'mailchimp' ).MailChimpAPI,
-    config = require( './conf' ),
     FB = require( './lib/fb' ),
     Data = require( './lib/data' ),
     app = module.exports = express(),
@@ -19,7 +18,7 @@ var http = require( 'http' ),
     reload = require( './lib/flick-handler' );
 
 try {
-    var mailchimp = new MailChimpAPI( config.MAILCHIMP.API_KEY, { secure: true } );
+    var mailchimp = new MailChimpAPI( process.env.MAILCHIMP_API_KEY, { secure: true } );
 }
 catch( e ) {
     console.error( '[ERROR] Can\'t connect to MailChimp', e.message );
@@ -37,7 +36,7 @@ function refreshData()
             data.events = results.events;
         } );
 
-        feedparser.parseUrl( config.RSS_FEED, function( err, meta, articles ) {
+        feedparser.parseUrl( process.env.RSS_FEED, function( err, meta, articles ) {
             data.news = articles;
         } );
     } );
@@ -185,7 +184,7 @@ app.post( '/subscribe', function( req, res )
 
         mailchimp.listSubscribe(
             {
-                id: config.MAILCHIMP.LIST_ID,
+                id: process.env.MAILCHIMP_LIST_ID,
                 email_address: email,
                 email_type: 'html',
                 update_existing: true,
