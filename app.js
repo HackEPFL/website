@@ -36,7 +36,7 @@ function refreshData()
             data.events = results.events;
         } );
 
-        feedparser.parseUrl( process.env.RSS_FEED, function( err, meta, articles ) {
+        feedparser.parseUrl( process.env.RSS_FEED_URL, function( err, meta, articles ) {
             data.news = articles;
         } );
     } );
