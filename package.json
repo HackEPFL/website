@@ -30,6 +30,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "PORT=4000 supervisor -e js,ejs app.js"
+    "start": "node app.js"
   }
 }
