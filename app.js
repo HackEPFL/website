@@ -176,40 +176,41 @@ app.post( '/subscribe', function( req, res )
 
     if( !email ) {
         res.json( 500, { status: 'error', error: 'No e-mail supplied.' } );
+        return;
     }
 
-    if( email && email.indexOf( '@' ) > 0 ) {
-        // Send an error if MailChimp doesn't answer after 10 seconds.
-        var timeout = setTimeout( function() {
-            res.json( 500, { status: 'error', error: 'Mailing list server didn\'t respond.' } );
-
-        }, 10 * 1000 );
-
-        mailchimp.listSubscribe(
-            {
-                id: process.env.MAILCHIMP_LIST_ID,
-                email_address: email,
-                email_type: 'html',
-                update_existing: true,
-                // double_optin: '?'
-                // send_welcome: '?'
-            },
-            function( err, response )
-            {
-                clearTimeout( timeout );
-
-                if( err ) {
-                    res.json( 500, { status: 'error', error: err.error } );
-                }
-                else {
-                    res.json( 200, { status: 'subscribed', message: 'Thanks! Please check your e-mail.' } );
-                }
-            }
-        );
-    }
-    else {
+    if( email.indexOf( '@' ) <= 0 ) {
         res.json( 500, { status: 'error', error: 'Invalid e-mail address.' } );
+        return;
     }
+
+    // Send an error if MailChimp doesn't answer after 10 seconds.
+    var timeout = setTimeout( function() {
+        res.json( 500, { status: 'error', error: 'Mailing list server didn\'t respond.' } );
+    }, 10 * 1000 );
+
+    mailchimp.listSubscribe(
+        {
+            id: process.env.MAILCHIMP_LIST_ID,
+            email_address: email,
+            email_type: 'html',
+            update_existing: true,
+            // double_optin: '?'
+            // send_welcome: '?'
+        },
+        function( err, response )
+        {
+            clearTimeout( timeout );
+
+            if( err ) {
+                console.error('MailChimp Error:', err);
+                res.json( 500, { status: 'error', error: 'MailChimp connection error.' } );
+            }
+            else {
+                res.json( 200, { status: 'subscribed', message: 'Thanks! Please check your e-mail.' } );
+            }
+        }
+    );
 } );
 
 app.use( express.static( __dirname + '/public' ) );
