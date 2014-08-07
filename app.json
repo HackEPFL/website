@@ -1,0 +1,7 @@
+{
+  "name": "Hackers at EPFL website",
+  "description": "Website of the Hackers at EPFL association",
+  "repository": "https://github.com/hackepfl/website",
+  "logo": "https://raw.githubusercontent.com/HackEPFL/website/master/public/img/logo.png",
+  "keywords": ["node", "express"]
+}
