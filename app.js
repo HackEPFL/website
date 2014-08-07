@@ -21,7 +21,13 @@ catch( e ) {
     console.error( '[ERROR] Can\'t connect to MailChimp', e.message );
 }
 
-var data = {};
+var data = {
+    events: {
+        future: [],
+        past: []
+    },
+    albums: []
+};
 
 function refreshData()
 {
