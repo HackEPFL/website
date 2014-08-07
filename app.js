@@ -12,10 +12,7 @@ var http = require( 'http' ),
     FB = require( './lib/fb' ),
     Data = require( './lib/data' ),
     app = module.exports = express(),
-    people = require( './lib/people' ),
-    flick = require( 'flick' ),
-    hook = flick(),
-    reload = require( './lib/flick-handler' );
+    people = require( './lib/people' );
 
 try {
     var mailchimp = new MailChimpAPI( process.env.MAILCHIMP_API_KEY, { secure: true } );
@@ -210,12 +207,6 @@ app.post( '/subscribe', function( req, res )
 } );
 
 app.use( express.static( __dirname + '/public' ) );
-
-hook.use( 'HackEPFL/website', reload );
-app.post( '/flick', flick.whitelist( { local: true } ) );
-app.post( '/flick', flick.payload() );
-app.post( '/flick', hook );
-app.post( '/flick', function( req, res ) { res.end( 'Thanks, GitHub!' ); } );
 
 app.use( function( req, res, next )
 {
