@@ -24,9 +24,8 @@ You will need the following software to be able to run this website:
 
 Then open a console and enter the following commands:
 
-    $ git clone --recursive https://github.com/HackEPFL/website.git
+    $ git clone https://github.com/HackEPFL/website.git
     $ cd website/
-    $ git clone https://github.com/romac/hackepfl-config.git ./conf
     $ npm install
     $ cd public/ && bower install && cd ..
 
