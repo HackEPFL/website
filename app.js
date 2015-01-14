@@ -32,9 +32,12 @@ var data = {
 function refreshData()
 {
     FB.__connect( function( FB ) {
+        console.log("Connected to FB");
         accessToken = FB.getAccessToken();
 
+        console.log("Fetching data...");
         Data.fetchAll( FB, function( err, results ) {
+            !err && console.log("Data has been fetched.");
             data.albums = results.albums;
             data.events = results.events;
         } );
